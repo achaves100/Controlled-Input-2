@@ -2,12 +2,9 @@ import React, { useState } from "react";
 
 export function Home() {
 	const [name, setName] = useState("");
-	const ValidateInput = () => {
-		if (name == "") {
-			alert("Enter your Name");
-		} else {
-			alert("Welcome " + name);
-		}
+
+	const changeName = () => {
+		setName("Pedro");
 	};
 
 	return (
@@ -15,9 +12,8 @@ export function Home() {
 			<input
 				placeholder="Enter your Name"
 				onChange={e => setName(e.target.value)}
-				value={name}
-                ></input>
-			<button onClick={ValidateInput}>Validate</button>
+				value={name}></input>
+			<button onClick={changeName}>Validate</button>
 		</div>
 	);
 }
